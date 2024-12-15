@@ -1,0 +1,20 @@
+* SSH Configs
+
+** How to generate a new ssh key in Windows 
+  @code powershell
+  ssh-keygen -t ed25519 -C "your_email@example.com"
+  Get-Service -Name ssh-agent | Set-Service -StartupType Manual
+  Start-Service ssh-agent
+  ssh-add -l
+  ssh-add c:/Users/USERNAME/.ssh/id_ed25519
+  @end
+
+** How to generate a new ssh key in Linux
+  @code bash
+  ssh-keygen -t ed25519 -C "your_email@example.com"
+  eval ssh-agent
+  echo $SSH_AGENT_SOCK
+  ssh-add -l
+  ssh-add c:/Users/USERNAME/.ssh/id_ed25519
+  @end
+
