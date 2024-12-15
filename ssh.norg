@@ -18,3 +18,34 @@
   ssh-add c:/Users/USERNAME/.ssh/id_ed25519
   @end
 
+** Config
+
+*** Global SSH Config
+    Host *
+    User your-username            # Default username for SSH connections
+    IdentityFile ~/.ssh/id_rsa    # Default SSH private key
+    ServerAliveInterval 60        # Keep connection alive every 60 seconds
+    Compression yes               # Enable compression to speed up transfer
+    ForwardAgent yes              # Forward SSH agent
+
+*** Example for a specific server
+    Host myserver
+    HostName example.com          # Actual server hostname or IP address
+    User admin                    # Override default username
+    Port 2222                     # Use a custom SSH port
+    IdentityFile ~/.ssh/my_key    # Use a specific SSH key for this server
+    LocalForward 8080 localhost:80 # Forward local port 8080 to remote port 80
+
+*** Another example with a short alias
+    Host devbox
+    HostName 192.168.1.10
+    User developer
+    Port 22
+    IdentityFile ~/.ssh/id_dev
+    ProxyJump bastion.example.com # Jump through a bastion host
+
+*** Example for GitHub
+    Host github
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/github_key
