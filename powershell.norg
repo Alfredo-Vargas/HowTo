@@ -1,0 +1,6 @@
+* Powershell Syntax and Functions
+
+** How to get the type of a variable
+  @code powershell
+  $variable.GetType()
+  @end
