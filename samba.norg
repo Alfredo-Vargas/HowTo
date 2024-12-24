@@ -1,0 +1,6 @@
+* Samba settings in Linux Server
+
+** How to set up a Samba share in Linux
+   @code bash
+   apt install samba
+   @end
