@@ -4,3 +4,8 @@
   @code powershell
   $variable.GetType()
   @end
+
+** How to show the configuration files from $PROFILE
+  @code powershell
+  $PROFILE | Select *
+  @end
