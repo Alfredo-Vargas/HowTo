@@ -1,5 +1,15 @@
 * SSH Configs
 
+** How to remove a known host from the list
+   @code bash
+   ssh-keygen -R <hostname_or_ip>
+   @end
+
+** How to copy a public ssh key to server
+  @code bash
+  ssh-copy-id -i /public/key/location.pub username@server_ip
+  @end
+
 ** How to generate a new ssh key in Windows 
   @code powershell
   ssh-keygen -t ed25519 -C "your_email@example.com"
