@@ -1,0 +1,34 @@
+* Commands for gcloud
+** How to access the cheat sheet in the terminal
+   @code powershell
+   gcloud cheat-sheet
+   @end
+
+** How to list the gcloud available configurations
+   @code powershell
+   gcloud config configurations list
+   @end
+
+** How to check the current login
+   @code powershell
+   gcloud auth list
+   @end
+
+** How to inititialize, authorize, and configure the gcloud tool.
+   @code powershell
+   gcloud init
+   @end
+
+** How to display the version and installed components
+   @code powershell
+   gcloud version
+   @end
+** How to install specific components
+   @code powershell
+   gcloud components install
+   @end
+
+** How to see the project name
+   @code powershell
+   gcloud config get-value project
+   @end
