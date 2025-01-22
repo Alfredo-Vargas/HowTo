@@ -51,6 +51,12 @@
    gcloud services enable admin.googleapis.com
    @end
 
+** How to register the app using OAuth
+   - After a project was created go into the Google Cloud Console, then go to APIs & Services and then to OAuth consent screen. Select Internal.
+   - Give the app information.
+   - In scopes just save and continue.
+   - Now go to credentials and create an OAuth 2.0 Client IDs. This will grant you the config.json file.
+
 ** How to access the cheat sheet in the terminal
    @code powershell
    gcloud cheat-sheet
