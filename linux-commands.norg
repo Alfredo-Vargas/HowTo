@@ -4,3 +4,8 @@
    @code bash
    sha256sum <file> --check <file.sha256>
    @end
+
+** How to check that fstab is error free
+   @code bash
+   sudo mount -a
+   @end
