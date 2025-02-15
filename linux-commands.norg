@@ -9,3 +9,12 @@
    @code bash
    sudo mount -a
    @end
+
+** How to properly use the `/usr` directory
+   *** Key Subdirectories in /usr:
+       - /usr/bin – Binaries for normal users (e.g., vim, ls, grep).
+       - /usr/sbin – System administration binaries (e.g., iptables, fdisk).
+       - /usr/lib – Libraries for user applications.
+       - /usr/include – Header files for compiling programs.
+       - /usr/share – Architecture-independent data (e.g., icons, documentation).
+       - /usr/local – For software installed manually (separate from system package manager).
