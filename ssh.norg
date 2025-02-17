@@ -5,6 +5,11 @@
    ssh-keygen -R <hostname_or_ip>
    @end
 
+** How to add ssh key to agent
+   @code bash
+   ssh-add /path/to/private/ssh/key
+   @end
+
 ** How to copy a public ssh key to server
   @code bash
   ssh-copy-id -i /public/key/location.pub username@server_ip
