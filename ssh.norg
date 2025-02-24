@@ -1,5 +1,10 @@
 * SSH Configs
 
+** How to troubleshoot your ssh config
+   @code bash
+   sudo sshd -t
+   @end
+
 ** How to remove a known host from the list
    @code bash
    ssh-keygen -R <hostname_or_ip>
