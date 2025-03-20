@@ -9,3 +9,20 @@
    @code bash
    sudo mount -a
    @end
+
+** How to check ports that are open in a linux server
+   - Here the flags 
+   -- `-i` shows network connections.
+   -- `-P` shows port numbers instead of services names.
+   -- `-n` shows numerical addresses instead of hostnames.
+   @code bash
+   sudo lsof -i -P -n
+   @end
+   - Alternatively
+   -- `-t` shows tcp ports.
+   -- `-u` shows udp ports.
+   -- `-l` shows listening ports.
+   -- `-n` display numerical addresses.
+   @code bash
+   sudo ss -tuln
+   @end
