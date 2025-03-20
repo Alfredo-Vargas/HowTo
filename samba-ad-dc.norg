@@ -1,0 +1,14 @@
+* Commands for Samba Active Directory Domain Controller
+
+** How to execute a command specifying a particular user
+
+   @code bash
+   samba-tool dns serverinfo $(hostname -f) -U Administrator
+   @end
+
+
+** How to check Kerberos ticket status
+
+   @code bash
+   klist
+   @end
