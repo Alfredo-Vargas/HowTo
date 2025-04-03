@@ -12,3 +12,20 @@
    @code bash
    klist
    @end
+
+** How to resolve a samba ad dc server from a linux host
+   @code bash
+   sudo vim /etc/systemd/resolved.conf
+   @end
+   - Then add the following lines:
+   @code vim
+   [Resolve]
+   DNS=<SAMBA-AD-DC-IP> 8.8.8.8
+   Domanis=yourdomain.example
+   @end
+   - Then restart and verify the resolution
+   @code bash
+   sudo systemctl restart systemd-resolved
+   resolvectl status
+   nslookup yourdomain.example
+   @end
