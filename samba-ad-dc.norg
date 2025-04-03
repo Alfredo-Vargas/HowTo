@@ -29,3 +29,14 @@
    resolvectl status
    nslookup yourdomain.example
    @end
+
+** How to join a computer to a domain
+   @code bash
+   sudo realm join -v --membership-software=samba --client-software=winbind  yourdomain.example
+   @end
+
+** How to create a home dir and login shell for a new user when login into a joined computer
+   @code bash
+   sudo pam-auth-update --enable mkhomedir
+   @end
+
