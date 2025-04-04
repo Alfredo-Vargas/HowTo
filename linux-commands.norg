@@ -1,5 +1,11 @@
 * Some new commands that I just recently learned
 
+** How to release and renew a dhcp obtained IP
+   @code bash
+   sudo dhclient -r
+   sudo dhclient
+   @end
+
 ** How to check and verify the sha256sum
    @code bash
    sha256sum <file> --check <file.sha256>

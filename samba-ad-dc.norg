@@ -40,3 +40,14 @@
    sudo pam-auth-update --enable mkhomedir
    @end
 
+** How to omit the fully qualified domain name when login as user
+   - First you need to modify `/etc/sssd/sssd.conf`
+   @code ini
+   [domain/yourdomain.example]
+   use_fully_qualified_names = False
+   fallback_homedir = /home/%u
+   @end
+   - Then restart
+   @code bash
+   sudo systemctl restart sssd
+   @end
