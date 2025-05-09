@@ -6,7 +6,6 @@
    samba-tool dns serverinfo $(hostname -f) -U Administrator
    @end
 
-
 ** How to check Kerberos ticket status
 
    @code bash
@@ -31,13 +30,38 @@
    @end
 
 ** How to join a computer to a domain
+   - If the host computer is Linux with a Debian based system you first need:
+   @code bash
+   sudo apt update
+   sudo apt install realmd sssd sssd-tools libnss-sss libpam-sss adcli samba-common-bin oddjob oddjob-mkhomedir packagekit krb5-user
+   @end
+   - The join by
    @code bash
    sudo realm join -v --membership-software=samba --client-software=winbind  yourdomain.example
    @end
+   - Enable manual login by lightdm
+   @code bash
+   sudo vim /etc/lightdm/lightdm.conf
+   @end
+   - Add the following lines
+   @code ini
+   [Seat:*]
+   greeter-show-manual-login=true
+   greeter-hide-users=true
+   @end
+   - Restart lightdm
+   @code bash
+   sudo systemctl restart lightdm
+   @end
 
 ** How to create a home dir and login shell for a new user when login into a joined computer
+   - First execute
    @code bash
    sudo pam-auth-update --enable mkhomedir
+   @end
+   - Then for Debian based systems add the following line to `/etc/pam.d/common-session`:
+   @code bash
+   session optional        pam_mkhomedir.so skel=/etc/skel umask=077
    @end
 
 ** How to omit the fully qualified domain name when login as user
@@ -51,3 +75,16 @@
    @code bash
    sudo systemctl restart sssd
    @end
+
+** How to list users with a full qualified domain name
+
+   @code bash
+   sudo samba-tool user list --full-dn
+   @end
+
+** How to create an OU in samba AD DC
+
+   @code bash
+   sudo samba-tool ou create "OU=OU_NAME"
+   @end
+
