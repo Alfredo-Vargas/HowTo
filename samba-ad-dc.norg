@@ -89,7 +89,7 @@
    @end
 
 ** How to fix deprecation of arcfour-hmac encryption type
-   - Edit the file `/etc/krb5/krb5.conf`
+   - Edit the file `/etc/krb5/krb5.conf` or `/etc/krb5.conf`
    @code ini
    [libdefaults]
    default_realm = YOUR.REALM.COM
