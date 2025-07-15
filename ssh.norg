@@ -1,26 +1,26 @@
-* SSH Configs
+# SSH Configs
 
-** How to troubleshoot your ssh config
+## How to troubleshoot your ssh config
    @code bash
    sudo sshd -t
    @end
 
-** How to remove a known host from the list
+## How to remove a known host from the list
    @code bash
    ssh-keygen -R <hostname_or_ip>
    @end
 
-** How to add ssh key to agent
+## How to add ssh key to agent
    @code bash
    ssh-add /path/to/private/ssh/key
    @end
 
-** How to copy a public ssh key to server
+## How to copy a public ssh key to server
   @code bash
   ssh-copy-id -i /public/key/location.pub username@server_ip
   @end
 
-** How to generate a new ssh key in Windows 
+## How to generate a new ssh key in Windows 
   @code powershell
   ssh-keygen -t ed25519 -C "your_email@example.com"
   Get-Service -Name ssh-agent | Set-Service -StartupType Manual
@@ -29,7 +29,7 @@
   ssh-add c:/Users/USERNAME/.ssh/id_ed25519
   @end
 
-** How to generate a new ssh key in Linux
+## How to generate a new ssh key in Linux
   @code bash
   ssh-keygen -t ed25519 -C "your_email@example.com"
   eval ssh-agent
@@ -38,19 +38,19 @@
   ssh-add c:/Users/USERNAME/.ssh/id_ed25519
   @end
 
-** How to check ssh authentication
+## How to check ssh authentication
    @code bash
    ssh -vT git@github.com
    @end
 
-** List ssh keys added to the agent
+## List ssh keys added to the agent
    @code bash
    ssh-add -l
    @end
 
-** Config
+## Config
 
-*** Global SSH Config
+### Global SSH Config
     @code sshconfig
     Host *
     User your-username            # Default username for SSH connections
@@ -60,7 +60,7 @@
     ForwardAgent yes              # Forward SSH agent
     @end
 
-*** Example for a specific server
+### Example for a specific server
     @code sshconfig
     Host myserver
     HostName example.com          # Actual server hostname or IP address
@@ -70,7 +70,7 @@
     LocalForward 8080 localhost:80 # Forward local port 8080 to remote port 80
     @end
 
-*** Another example with a short alias
+### Another example with a short alias
     @code sshconfig
     Host devbox
     HostName 192.168.1.10
@@ -80,7 +80,7 @@
     ProxyJump bastion.example.com # Jump through a bastion host
     @end
 
-*** Example for GitHub
+### Example for GitHub
     @code sshconfig
     Host github.com
     HostName github.com

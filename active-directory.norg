@@ -1,34 +1,34 @@
-* Useful Commands when Using Active Directory
+# Useful Commands when Using Active Directory
 
-** How to get the current domain info
+## How to get the current domain info
    @code powershell
    Get-ADDomain
    @end
 
-** How to test connectivity with the AD domain controller
+## How to test connectivity with the AD domain controller
    @code powershell
    Test-Connection <Domain-Controller>
    @end
 
-** How to list all OUs (Organizational Units)
+## How to list all OUs (Organizational Units)
    @code bash
-   Get-ADOrganizationalUnit -Filter * | Select-Object Name, DistinguishedName
+   Get-ADOrganizationalUnit -Filter # | Select-Object Name, DistinguishedName
    @end
 
-** How to check the groups a user belongs to
+## How to check the groups a user belongs to
    @code powershell
    Get-ADUser -Identity <Username> -Properties MemberOf | Select-Object -ExpandProperty MemberOf
    @end
 
-** How to check the accounts which have been inactive by at least 90 days
+## How to check the accounts which have been inactive by at least 90 days
    @code powershell
    Search-ADAccount -AccountInactive -UsersOnly -TimeSpan 90.00:00:00
    @end
 
-** How to list computers stored in a container (NOT OU). The list can be exported as csv also:
+## How to list computers stored in a container (NOT OU). The list can be exported as csv also:
    @code powershell
-   Get-ADComputer -Filter * -Properties * | Select-Object Name, OperatingSystem, DistinguishedName
-   Get-ADComputer -Filter * -Properties * | Select-Object Name, OperatingSystem, DistinguishedName | Export-Csv -Path "C:\ADComputers.csv" -NoTypeInformation
+   Get-ADComputer -Filter # -Properties # | Select-Object Name, OperatingSystem, DistinguishedName
+   Get-ADComputer -Filter # -Properties # | Select-Object Name, OperatingSystem, DistinguishedName | Export-Csv -Path "C:\ADComputers.csv" -NoTypeInformation
    @end
 
 

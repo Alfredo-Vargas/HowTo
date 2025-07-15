@@ -1,9 +1,9 @@
 {@ Vrijdag 13 December 2024}
-* Shopping
-** Important Shopping
+# Shopping
+## Important Shopping
    This is stuff I must immediately buy:
    - Bread
-** Other Stuff
+## Other Stuff
    This is not as important:
    - Milk
    - Tomatoes (yum)
@@ -20,6 +20,6 @@ x = np.ones(10)
    [hithere]("https://youtube.com")
 
 
-** Hi There
+## Hi There
    - Yep
-*** hhh
+### hhh

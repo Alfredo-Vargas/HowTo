@@ -1,18 +1,18 @@
-* Commands for Samba Active Directory Domain Controller
+# Commands for Samba Active Directory Domain Controller
 
-** How to execute a command specifying a particular user
+## How to execute a command specifying a particular user
 
    @code bash
    samba-tool dns serverinfo $(hostname -f) -U Administrator
    @end
 
-** How to check Kerberos ticket status
+## How to check Kerberos ticket status
 
    @code bash
    klist
    @end
 
-** How to resolve a samba ad dc server from a linux host
+## How to resolve a samba ad dc server from a linux host
    @code bash
    sudo vim /etc/systemd/resolved.conf
    @end
@@ -29,7 +29,7 @@
    nslookup yourdomain.example
    @end
 
-** How to join a computer to a domain
+## How to join a computer to a domain
    - If the host computer is Linux with a Debian based system you first need:
    @code bash
    sudo apt update
@@ -54,7 +54,7 @@
    sudo systemctl restart lightdm
    @end
 
-** How to create a home dir and login shell for a new user when login into a joined computer
+## How to create a home dir and login shell for a new user when login into a joined computer
    - First execute
    @code bash
    sudo pam-auth-update --enable mkhomedir
@@ -64,7 +64,7 @@
    session optional        pam_mkhomedir.so skel=/etc/skel umask=077
    @end
 
-** How to omit the fully qualified domain name when login as user
+## How to omit the fully qualified domain name when login as user
    - First you need to modify `/etc/sssd/sssd.conf`
    @code ini
    [domain/yourdomain.example]
@@ -76,19 +76,19 @@
    sudo systemctl restart sssd
    @end
 
-** How to list users with a full qualified domain name
+## How to list users with a full qualified domain name
 
    @code bash
    sudo samba-tool user list --full-dn
    @end
 
-** How to create an OU in samba AD DC
+## How to create an OU in samba AD DC
 
    @code bash
    sudo samba-tool ou create "OU=OU_NAME"
    @end
 
-** How to fix deprecation of arcfour-hmac encryption type
+## How to fix deprecation of arcfour-hmac encryption type
    - Edit the file `/etc/krb5/krb5.conf` or `/etc/krb5.conf`
    @code ini
    [libdefaults]

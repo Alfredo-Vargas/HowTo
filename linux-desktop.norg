@@ -1,6 +1,6 @@
-* Linux Desktop Environment Settings
+# Linux Desktop Environment Settings
 
-** How to enable dock shortcuts in a gnome-based desktop environment
+## How to enable dock shortcuts in a gnome-based desktop environment
 
 @code bash
 gsettings set org.gnome.shell.extensions.dash-to-dock hot-keys true

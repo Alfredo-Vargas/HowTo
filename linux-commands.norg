@@ -1,22 +1,22 @@
-* Some new commands that I just recently learned
+# Some new commands that I just recently learned
 
-** How to release and renew a dhcp obtained IP
+## How to release and renew a dhcp obtained IP
    @code bash
    sudo dhclient -r
    sudo dhclient
    @end
 
-** How to check and verify the sha256sum
+## How to check and verify the sha256sum
    @code bash
    sha256sum <file> --check <file.sha256>
    @end
 
-** How to check that fstab is error free
+## How to check that fstab is error free
    @code bash
    sudo mount -a
    @end
 
-** How to check ports that are open in a linux server
+## How to check ports that are open in a linux server
    - Here the flags 
    -- `-i` shows network connections.
    -- `-P` shows port numbers instead of services names.
@@ -33,8 +33,8 @@
    sudo ss -tuln
    @end
 
-** How to properly use the `/usr` directory
-   *** Key Subdirectories in /usr:
+## How to properly use the `/usr` directory
+   ### Key Subdirectories in /usr:
        - /usr/bin – Binaries for normal users (e.g., vim, ls, grep).
        - /usr/sbin – System administration binaries (e.g., iptables, fdisk).
        - /usr/lib – Libraries for user applications.

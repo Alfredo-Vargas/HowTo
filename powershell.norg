@@ -1,11 +1,11 @@
-* Powershell Syntax and Functions
+# Powershell Syntax and Functions
 
-** How to get the type of a variable
+## How to get the type of a variable
   @code powershell
   $variable.GetType()
   @end
 
-** How to show the configuration files from $PROFILE
+## How to show the configuration files from $PROFILE
   @code powershell
   $PROFILE | Select *
   @end
