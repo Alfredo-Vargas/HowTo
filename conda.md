@@ -1,12 +1,12 @@
 # Commands for conda
 
 ## How to create an environment
-   @code bash
+```bash
    conda create -n "environment-name"
-   @end
+```
 
 ## How to update a package
-   @code bash
+   ```bash
    conda activate "environment-name"
    conda update "package-name"
-   @end
+   ```

@@ -1,35 +1,35 @@
 # Useful Commands when Using Active Directory
 
 ## How to get the current domain info
-   @code powershell
+   ```powershell
    Get-ADDomain
-   @end
+   ```
 
 ## How to test connectivity with the AD domain controller
-   @code powershell
+   ```powershell
    Test-Connection <Domain-Controller>
-   @end
+   ```
 
 ## How to list all OUs (Organizational Units)
-   @code bash
+  ```powershell
    Get-ADOrganizationalUnit -Filter # | Select-Object Name, DistinguishedName
-   @end
+   ```
 
 ## How to check the groups a user belongs to
-   @code powershell
+   ```powershell
    Get-ADUser -Identity <Username> -Properties MemberOf | Select-Object -ExpandProperty MemberOf
-   @end
+   ```
 
 ## How to check the accounts which have been inactive by at least 90 days
-   @code powershell
+   ```powershell
    Search-ADAccount -AccountInactive -UsersOnly -TimeSpan 90.00:00:00
-   @end
+   ```
 
 ## How to list computers stored in a container (NOT OU). The list can be exported as csv also:
-   @code powershell
+   ```powershell
    Get-ADComputer -Filter # -Properties # | Select-Object Name, OperatingSystem, DistinguishedName
    Get-ADComputer -Filter # -Properties # | Select-Object Name, OperatingSystem, DistinguishedName | Export-Csv -Path "C:\ADComputers.csv" -NoTypeInformation
-   @end
+   ```
 
 
 

@@ -6,11 +6,11 @@
 
 
 ## How to set up a Samba share in Linux
-   @code bash
+```bash
    sudo apt install samba
-   @end
+   ```
 
 ## How to config samba
-   @code bash
+```bash
    sudo vim /etc/samba/smb.conf
-   @end
+   ```

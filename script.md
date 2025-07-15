@@ -2,8 +2,8 @@
 
 ## Scripting Gotchas in Powershell
    - How specify the path where the script is located
-@code powershell
+```powershell
 $givenPath = "$PSScriptRoot\script.ps1"
-   @end
+```
 
 ## Scripting Gotchas in Linux

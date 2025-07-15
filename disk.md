@@ -1,21 +1,20 @@
 # Commands to setup a disk
 
 ## How to wipe a disk
-   @code bash
+```bash
    sudo wipefs -a /dev/yourdisk
-   @end
+```
 ## How to partition a disk
-   @code bash
+```bash
    sudo fdisk /dev/yourdisk
-   @end
+```
 ## How to create a file system
-   @code bash
+```bash
    sudo fdisk /dev/yourdisk
-   @end
-
+```
 ## How to format your file system (applicable to partitions)
-   @code bash
+```bash
    sudo mkfs.ntfs /dev/yourpartition
-   @end
+```
 
 

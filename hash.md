@@ -1,11 +1,11 @@
 # Hash in Linux binary and Get-FileHash Cmdlet
 
 ## How to hash  in powershell
-   @code powershell
+```powershell
    Get-FileHash .\file -Algorithm SHA256
-   @end
+```
 
 ## How to hash in linux
-  @code bash
+```bash
   sha256sum ./file
-  @end
+```

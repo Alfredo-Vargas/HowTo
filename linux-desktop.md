@@ -2,6 +2,6 @@
 
 ## How to enable dock shortcuts in a gnome-based desktop environment
 
-@code bash
+```bash
 gsettings set org.gnome.shell.extensions.dash-to-dock hot-keys true
-@end
+```

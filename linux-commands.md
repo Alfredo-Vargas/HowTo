@@ -1,37 +1,37 @@
 # Some new commands that I just recently learned
 
 ## How to release and renew a dhcp obtained IP
-   @code bash
+```bash
    sudo dhclient -r
    sudo dhclient
-   @end
+```
 
 ## How to check and verify the sha256sum
-   @code bash
+```bash
    sha256sum <file> --check <file.sha256>
-   @end
+ ```
 
 ## How to check that fstab is error free
-   @code bash
+```bash
    sudo mount -a
-   @end
+```
 
 ## How to check ports that are open in a linux server
    - Here the flags 
    -- `-i` shows network connections.
    -- `-P` shows port numbers instead of services names.
    -- `-n` shows numerical addresses instead of hostnames.
-   @code bash
+```bash
    sudo lsof -i -P -n
-   @end
+```
    - Alternatively
    -- `-t` shows tcp ports.
    -- `-u` shows udp ports.
    -- `-l` shows listening ports.
    -- `-n` display numerical addresses.
-   @code bash
+```bash
    sudo ss -tuln
-   @end
+```
 
 ## How to properly use the `/usr` directory
    ### Key Subdirectories in /usr:

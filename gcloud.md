@@ -6,50 +6,50 @@
    - Click the Google Cloud Platform and tick the box to allow users to make projects in Google Cloud Platform.
 
 ## How to know which account is active and which project is active
-   @code bash
+   ```bash
    gcloud auth list && gcloud config configurations list && gcloud config get-value project
-   @end
+   ```
 
 ## How to which account is active
-   @code powershell
+   ```bash
    gcloud auth list
-   @end
+   ```
 
 ## How to authenticate with Google Cloud CLI
-   @code powershell
+   ```bash
    gcloud auth login
-   @end
+   ```
 
 ## How to inititialize, authorize, and configure the gcloud tool.
-   @code powershell
+   ```bash
    gcloud init
-   @end
+   ```
 
 ## How to create a new project
-   @code bash
+   ```bash
    gcloud
    gcloud projects create PROJECT-ID --name="<PROJECT-NAME>"
-   @end
+   ```
 
 ## How to see the project name if a project is active (otherwise output = unset)
-   @code powershell
+   ```bash
    gcloud config get-value project
-   @end
+   ```
 
 ## How to list all availables projects in current account
-   @code powershell
+   ```bash
    gcloud projects list
-   @end
+   ```
 
 ## How to select a project
-   @code powershell
+   ```bash
    gcloud config set project <PROJECT-ID>
-   @end
+   ```
 
 ## How to enable the Admin SDK API
-   @code powershell
+   ```bash
    gcloud services enable admin.googleapis.com
-   @end
+   ```
 
 ## How to register the app using OAuth
    - After a project was created go into the Google Cloud Console, then go to APIs & Services and then to OAuth consent screen. Select Internal.
@@ -58,27 +58,27 @@
    - Now go to credentials and create an OAuth 2.0 Client IDs. This will grant you the config.json file.
 
 ## How to access the cheat sheet in the terminal
-   @code powershell
+   ```bash
    gcloud cheat-sheet
-   @end
+   ```
 
 
 ## How to list the gcloud available configurations
-   @code powershell
+   ```bash
    gcloud config configurations list
-   @end
+   ```
 
 ## How to change the configuration
-   @code powershell
+   ```bash
    gcloud config configurations activate <CONFIG-NAME>
-   @end
+   ```
 
 ## How to display the version and installed components
-   @code powershell
+   ```bash
    gcloud version
-   @end
+   ```
 
 ## How to install specific components
-   @code powershell
+   ```bash
    gcloud components install
-   @end
+   ```
